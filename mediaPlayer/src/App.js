@@ -6,11 +6,6 @@ import List from './list/List';
 import Service from './services/Service'
 
 
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faPlay, fasChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-
-// library.add(faPlay, fasChevronLeft, faChevronRight);
-
 class App extends Component {
 
   constructor(props) {
@@ -29,26 +24,21 @@ class App extends Component {
             this.setState({ songList: resp });
         })
         .catch (error => {
-            console.log (`Error occured ${ error.status }`);
         })
   }
 
   updateList = (newState) => {
-    console.log (newState)
     this.setState(newState);
   }
 
   savePlaylist() {
-        console.log ('save', this.state.songList);
         alert ("Saving Playlist ... ");
         this.service
             .createPlaylist (this.state.songList)
             .then (res => res.json ())
             .then (resp => {
-              console.log (resp);
             })
             .catch (error => {
-                console.log (`Error occured ${ error.status }`);
             })
     }
 
