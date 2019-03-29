@@ -1,0 +1,31 @@
+.abc{
+  margin-bottom: 100%
+}
+
+.item-container {
+  position: absolute;
+  width: 100%;
+  bottom: 1%;
+  margin-bottom: 10%;
+  
+}
+
+.item {
+  padding: 10px;
+  border: 1px solid grey;
+  margin-bottom: auto;
+  /* border-radius: 10%; */
+  background: white;
+}
+
+.item:hover {
+  background-color:lightgrey;
+}
+
+
+.fill-space {
+      padding: 5px;
+      margin: 5px;
+      /* font-size: medium; */
+      font-family: cursive;
+}
